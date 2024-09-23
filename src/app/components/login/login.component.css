@@ -1,0 +1,28 @@
+.bg {
+    background-color: #1f9141;
+    background-image: url('../../../assets/img/formap.webp'); /* Cambia esta ruta por la de tu imagen */
+    background-size: 50%; /* Cambia el porcentaje para ajustar el tamaño */
+    background-position: center; /* Esto centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita la imagen */
+}
+.bg-container-form{
+    background-color: white;
+}
+.input-rounded {
+    border-radius: 30px; /* Ajusta el valor a tu preferencia */
+}
+.btn-green {
+    color: white;
+    background-color: #28a745; /* Color verde */
+    border: none; /* Sin borde */
+}
+
+.btn-green:hover {
+    background-color: #218838; /* Color verde más oscuro al pasar el mouse */
+}
+.title{
+    font-size: 2rem;
+}
+.spinner{
+    margin: 0 auto;
+}

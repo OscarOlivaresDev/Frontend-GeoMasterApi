@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center align-items-center min-vh-100"> <!--Contenedor principal-->
+    <div class="container w-50 mt-6 rounded shadow"> <!--w-75--> <!--Contenedor secundario tenia mt-5 --> 
+        <div class="row align-items-stretch">
+            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+            </div>
+            <div class="col bg-container-form p-4 rounded-end "> <!--d-flex flex-column align-items-center justify-content-center-->
+                <h2 class="fw-bold text-center pt-5 mb-5 title">¡Bienvenido!</h2>
+                <!--Login-->
+                <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
+                <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()">
+                    <div class="mb-4">
+                        <label for="email" class="form-label fw-bold">Usuario</label>
+                        <input type="text" class="form-control input-rounded" autocomplete="off" placeholder="Usuario" formControlName="usuario">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="form-label fw-bold">Contraseña</label>
+                        <input type="password" class="form-control input-rounded" autocomplete="off" placeholder="Contraseña" formControlName="password">
+                    </div>
+                    <!--<div class="mb-4 form-check">
+                        <input type="checkbox" name="connected" class="form-check-input" id="">
+                        <label for="connected" class="form-check-label">Mantenerme conectado</label>
+                    </div>-->
+                    
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-green input-rounded" [disabled]="form.invalid">Iniciar sesión</button>
+                    </div>
+    
+                    <div class="my-3 text-center">
+                        <span>¿Todavía no tienes cuenta? <b>Crea una ahora</b></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Clase para centrar todo el login en cualquier dispositivo en caso de que no lo esté haciendo.-->
+<!--class="d-flex justify-content-center align-items-center min-vh-100"-->
